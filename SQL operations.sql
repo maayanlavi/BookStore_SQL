@@ -1,6 +1,11 @@
 -- create database Books;
 
+
+
 -- create user 
+grant INSERT, UPDATE,select,delete
+ON books
+to worker;
 grant INSERT, UPDATE,select,delete
 ON book_authers
 to worker;
