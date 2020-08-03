@@ -18,9 +18,9 @@ int main(void)
 
 
 		char user[30], pass[30];
-		cout << "user name: ";
+		cout << "user name: "<<endl;
 		cin >> user;
-		cout << "password";
+		cout << "password: "<<endl;
 		cin >> pass;
 
 
