@@ -249,7 +249,6 @@ CREATE TABLE delivery (
 delivery_id  smallint unsigned NOT NULL AUTO_INCREMENT,
 num_deal smallint unsigned,
 _status varchar(45) NOT NULL ,
-weight float,
 type_delivery smallint unsigned NOT NULL,
 PRIMARY KEY (delivery_id),
 FOREIGN KEY (type_delivery) REFERENCES delivery_type (type_delivery),
@@ -490,28 +489,28 @@ INSERT INTO deal(num_worker,id,payment_sum,payment_way,date_deal)
   VALUES ('8', '209876789',90,'credit','2019-05-20');
 INSERT INTO deal(num_worker,id,payment_sum,payment_way,date_deal)
   VALUES ('8', '209876789',155,'Bit','2019-07-20');
-INSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (1,3, 'send',1.3,1);
- iNSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (2,3, 'In preparation',1.7,1);
-iNSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (3,5, 'Arrived and waiting for collection',3,1);
-iNSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (4,5, 'Delivered',1.5,1);
-iNSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (5,1, 'send',2.3,1);
-iNSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (6,2, 'In preparation',2.6,1);
-iNSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (7,4, 'Arrived and waiting for collection',6,2);
-iNSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (8,6, 'Delivered',2.3,2);
-iNSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (9,7, 'send',1.9,2);
-iNSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (10,9, 'send',2.6,3);
-  iNSERT INTO delivery(delivery_id ,num_deal,_status,weight,type_delivery)
-  VALUES (11,10, 'send',6.6,3);
+INSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (1,3, 'send',1);
+ iNSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (2,3, 'In preparation',1);
+iNSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (3,5, 'Arrived and waiting for collection',1);
+iNSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (4,5, 'Delivered',1);
+iNSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (5,1, 'send',1);
+iNSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (6,2, 'In preparation',1);
+iNSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (7,4, 'Arrived and waiting for collection',2);
+iNSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (8,6, 'Delivered',2);
+iNSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (9,7, 'send',2);
+iNSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (10,9, 'send',3);
+  iNSERT INTO delivery(delivery_id ,num_deal,_status,type_delivery)
+  VALUES (11,10, 'send',3);
 
 select * from deal_book;
 
@@ -844,5 +843,3 @@ INSERT INTO books_condition(title,book_condition,current_inventory)
 VALUES ('The Kite Runner','Brand new',2);
 INSERT INTO books_condition(title,book_condition,current_inventory)
 VALUES ('Wuthering Heights','Brand new',8);
-
-select *from  books_condition;
