@@ -1,15 +1,18 @@
 MySQL with C++
 ==============
 
-Steps:
+A database system designed for a second-hand bookstore.
 
-1. Change database details in database-detail.h file.
+The system manages data on books, orders, customers, deliveries, purchases and store employees.
 
-2. Download this code
-    $ git clone https://github.com/megha55/mysql-with-cpp.git
+The system implements a basic textual user interface.
 
-3. To run example
-    $ make
+The interface displays a (numbered) list of actions.
 
-4. For installing MySQL Connector for C++
-    $ make install
+The user types a number (of the requested action). The app picks up the number and identifies the requested action. Asks the user for additional details (if required) necessary to perform the operation.
+
+The app performs minimal error checking.
+
+After identifying the requested operation, and receiving all the details needed to perform the operation, the application will perform the operation (while of course, contacting DBMS MySQL).
+
+The app will print the appropriate results.
